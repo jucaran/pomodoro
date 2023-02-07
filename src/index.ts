@@ -79,6 +79,7 @@ const init = async () => {
   // const answers2 = { interval: 5, reps: 5, shortPause: 1, longPause: 1 }
   // let { interval, reps, shortPause, longPause } = answers2
   let { interval, reps, shortPause, longPause } = answers
+
   let longPauseOn = false
   let shortPauseOn = false
   let remaining = interval
