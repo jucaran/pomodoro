@@ -1,11 +1,16 @@
 {
   "name": "pomodoro",
   "version": "1.0.0",
-  "main": "bin/index.js",
-  "bin": {
-    "pomodoro": "./bin/index.js"
-  },
+  "main": "./lib/index.js",
   "type": "module",
+  "bin": {
+    "pomodoro": "./lib/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "local": "npm i -g && pomodoro",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
   "dependencies": {
     "clear": "^0.1.0",
     "clui": "^0.3.6",
@@ -13,6 +18,9 @@
     "keypress": "^0.2.1"
   },
   "devDependencies": {
+    "@types/clui": "^0.3.1",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.13.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0"
   }
